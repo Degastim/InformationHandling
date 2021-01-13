@@ -8,7 +8,12 @@ public class Lexeme implements Component {
     }
 
     @Override
-    public StringBuilder buildText() {
-        return new StringBuilder(element);
+    public String buildText() {
+        return element;
+    }
+
+    @Override
+    public int size() {
+        return element.length();
     }
 }

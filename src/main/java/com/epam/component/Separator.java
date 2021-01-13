@@ -1,16 +1,16 @@
 package com.epam.component;
 
 public enum Separator {
-    TEXT("\n"),
-    PARAGRAPH("."),
+    TEXT("\n\t"),
+    PARAGRAPH(" "),
     SENTENCE(" "),
     WORD("");
-    private String string;
-    Separator(String string) {
-        this.string=string;
+    private String regex;
+    Separator(String regex) {
+        this.regex=regex;
     }
 
     public String getString() {
-        return string;
+        return regex;
     }
 }

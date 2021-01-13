@@ -1,5 +1,6 @@
 package com.epam.component;
 
 public interface Component {
-    StringBuilder buildText();
+    String buildText();
+    int size();
 }
