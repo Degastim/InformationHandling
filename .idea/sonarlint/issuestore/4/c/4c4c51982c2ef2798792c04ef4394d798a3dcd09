@@ -1,0 +1,6 @@
+
+T
+java:S1128"9Remove this unused import 'com.epam.component.Separator'.(§ıÖ8•ª¶æî.
+W
+java:S1128"7Remove this unused import 'com.epam.parser.TextParser'.(ìó½×şÿÿÿÿ8•ª¶æî.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Îµ‡¡ıÿÿÿÿ8†Ó×€ï.
