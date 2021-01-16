@@ -11,13 +11,14 @@ import com.epam.service.TextService;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws ReaderException {
         TextReader reader = new TextReader();
         String text=reader.readText("src/main/resources/data/text");
         TextService textService=new TextService();
-        textService.removeFromTextSentencesWithLessNumberWord(text,3);
-
+        Map<String, Long> map= textService.countNumberIdenticalWords(text);
+        System.out.println(map);
     }
 }

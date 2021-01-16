@@ -7,7 +7,9 @@ import com.epam.parser.TextParser;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TextService {
@@ -41,12 +43,26 @@ public class TextService {
         TextParser parser = new TextParser(Separator.PARAGRAPH);
         TextComposite textComposite = parser.parse(text);
         List<Component> paragraphList = textComposite.getList();
-       for(Component paragraphComponent: paragraphList) {
-            List<Component> sentenceComposite=((TextComposite)paragraphComponent).getList();
-            for(Component sentenceComponent:sentenceComposite) {
-                List<Component> SentenceList    =((TextComposite)sentenceComponent).getList();
+        for (Component paragraphComponent : paragraphList) {
+            List<Component> sentenceComposite = ((TextComposite) paragraphComponent).getList();
+            for (Component sentenceComponent : sentenceComposite) {
+                List<Component> SentenceList = ((TextComposite) sentenceComponent).getList();
             }
         }
-       return false;
+        return false;
+    }
+
+    public Map<String, Long> countNumberIdenticalWords(String text) {
+        TextParser parser = new TextParser(Separator.SENTENCE);
+        TextComposite textComposite = parser.parse(text);
+        List<Component> paragraphList = textComposite.getList();
+        List<String> wordList = paragraphList.stream()
+                .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
+                .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
+                .map(Component::buildText).collect(Collectors.toList());
+        Map<String, Long> result = wordList.stream().peek(System.out::println)
+                .map(String::toLowerCase)
+                .collect(Collectors.toMap(Function.identity(), v -> 1L, Long::sum));
+        return result;
     }
 }

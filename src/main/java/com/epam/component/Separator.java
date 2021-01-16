@@ -3,7 +3,7 @@ package com.epam.component;
 public enum Separator {
     TEXT("\\n\\s"),
     PARAGRAPH(" "),
-    SENTENCE(""),
+    SENTENCE(" "),
     WORD("");
     private String regex;
 

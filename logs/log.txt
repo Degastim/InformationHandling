@@ -144,3 +144,14 @@
 16-01-2021 22:34:10  INFO epam.reader.TextReader readText -Reading the text successfully
 16-01-2021 22:36:59  INFO epam.reader.TextReader readText -Reading the text successfully
 16-01-2021 22:37:29  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:47:29  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:48:11  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:48:54  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:49:15  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:50:02  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:50:24  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:50:47  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:50:59  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:52:03  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:52:40  INFO epam.reader.TextReader readText -Reading the text successfully
+17-01-2021 00:53:09  INFO epam.reader.TextReader readText -Reading the text successfully
