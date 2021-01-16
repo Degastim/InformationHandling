@@ -2,8 +2,8 @@ package com.epam.component;
 
 public enum Separator {
     TEXT("\\n\\s"),
-    PARAGRAPH("\\s"),
-    SENTENCE("\\s"),
+    PARAGRAPH(" "),
+    SENTENCE(""),
     WORD("");
     private String regex;
 

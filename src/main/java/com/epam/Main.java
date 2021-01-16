@@ -17,9 +17,7 @@ public class Main {
         TextReader reader = new TextReader();
         String text=reader.readText("src/main/resources/data/text");
         TextService textService=new TextService();
-        List<Component> list=textService.findSentencesWithLongestWord(text);
-        for(Component i:list) {
-            System.out.println(i.buildText());
-        }
+        textService.removeFromTextSentencesWithLessNumberWord(text,3);
+
     }
 }

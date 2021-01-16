@@ -27,9 +27,13 @@ public class TextService {
         TextParser parser = new TextParser(Separator.SENTENCE);
         TextComposite textComposite = parser.parse(text);
         List<Component> paragraphList = textComposite.getList();
-        longestWord = paragraphList.stream().map(o -> (TextComposite) o).flatMap(o -> o.getList().stream()).map(o -> (TextComposite) o).flatMap(o -> o.getList().stream()).max(Comparator.comparingInt(Component::size));
+        longestWord = paragraphList.stream().map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
+                .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
+                .max(Comparator.comparingInt(Component::size));
         size = longestWord.get().size();
-        resultList = paragraphList.stream().map(o -> (TextComposite) o).flatMap(o -> o.getList().stream()).map(o -> (TextComposite) o).flatMap(o -> o.getList().stream()).filter(o -> o.size() == size).collect(Collectors.toList());
+        resultList = paragraphList.stream().map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
+                .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream()).filter(o -> o.size() == size)
+                .collect(Collectors.toList());
         return resultList;
     }
 
@@ -37,7 +41,12 @@ public class TextService {
         TextParser parser = new TextParser(Separator.PARAGRAPH);
         TextComposite textComposite = parser.parse(text);
         List<Component> paragraphList = textComposite.getList();
-        paragraphList.stream().map(o -> (TextComposite) o).flatMap(o -> o.getList().stream());
-        return false;
+       for(Component paragraphComponent: paragraphList) {
+            List<Component> sentenceComposite=((TextComposite)paragraphComponent).getList();
+            for(Component sentenceComponent:sentenceComposite) {
+                List<Component> SentenceList    =((TextComposite)sentenceComponent).getList();
+            }
+        }
+       return false;
     }
 }
