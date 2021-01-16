@@ -8,7 +8,7 @@ import com.epam.component.TextComposite;
 public class TextParser extends AbstractParser {
     private AbstractParser parser = null;
     private final Separator level;
-    private static final String REGEX = "    ";
+    private static final String REGEX = "\\n\\s";
     private static final Separator SEPARATOR = Separator.TEXT;
 
     public TextParser(Separator level) {

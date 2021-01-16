@@ -137,3 +137,4 @@
 10-01-2021 23:10:52  INFO epam.reader.TextReader readText -Reading the text successfully
 10-01-2021 23:12:27  INFO epam.reader.TextReader readText -Reading the text successfully
 10-01-2021 23:14:03  INFO epam.reader.TextReader readText -Reading the text successfully
+16-01-2021 21:41:33  INFO epam.reader.TextReader readText -Reading the text successfully
