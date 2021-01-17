@@ -64,7 +64,7 @@ public class TextService {
                 .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
                 .map(o -> (TextComposite) o).flatMap(o -> o.getList().stream())
                 .map(Component::buildText).collect(Collectors.toList());
-        Map<String, Long> result = wordList.stream().peek(System.out::println)
+        Map<String, Long> result = wordList.stream()
                 .map(String::toLowerCase)
                 .collect(Collectors.toMap(Function.identity(), v -> 1L, Long::sum));
         return result;
