@@ -9,7 +9,7 @@ public class ParagraphParser extends AbstractParser {
     private AbstractParser parser = null;
     private final Separator level;
     private static final Separator SEPARATOR = Separator.PARAGRAPH;
-    private final String REGEX = "((?<=[.!?])\\s+|\n)";
+    private final String REGEX = "(?<=[.!?])\\s+";
 
     public ParagraphParser(Separator level) {
         this.level = level;

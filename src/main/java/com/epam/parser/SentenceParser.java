@@ -9,6 +9,8 @@ public class SentenceParser extends AbstractParser {
     private AbstractParser parser;
     private final Separator level;
     private static final Separator SEPARATOR = Separator.SENTENCE;
+    private static final String REGEX = "(\\s|\\n)";
+
 
     public SentenceParser(Separator level) {
         this.level = level;
@@ -19,7 +21,7 @@ public class SentenceParser extends AbstractParser {
         parser = new WordParser(level);
         Component result;
         TextComposite textComposite = new TextComposite(SEPARATOR);
-        String[] wordText = text.split(SEPARATOR.getString());
+        String[] wordText = text.split(REGEX);
         for (String word : wordText) {
             if (level.ordinal() >= SEPARATOR.ordinal()) {
                 result = parser.parse(word);

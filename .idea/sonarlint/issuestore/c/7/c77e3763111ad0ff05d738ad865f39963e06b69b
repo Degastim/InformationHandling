@@ -1,0 +1,15 @@
+
+T	java:S106?"9Replace this use of System.out or System.err by a logger.(Πν?8ώ½ιπ.
+S
+java:S14811"1Remove this unused "SentenceList" local variable.(βΰµώÿÿÿÿ8‡‹ιπ.
+=
+java:S3864?"!Remove this use of "Stream.peek".(Πν?8ώ½ιπ.
+b
+java:S18541"@Remove this useless assignment to local variable "SentenceList".(βΰµώÿÿÿÿ8‡‹ιπ.
+r	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(βΰµώÿÿÿÿ8‡‹ιπ.
+\
+java:S3655#":Call "longestWord.isPresent()" before accessing the value.(ΆΜ΄όÿÿÿÿ8‡‹ιπ.
+z
+java:S1488?"^Immediately return this expression instead of assigning it to the temporary variable "result".(Πν?8ίÒιπ.
+O
+java:S1172*"-Remove this unused method parameter "number".(ηΝΦύÿÿÿÿ8‡‹ιπ.

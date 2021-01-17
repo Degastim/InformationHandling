@@ -15,6 +15,10 @@ public class TextComposite implements Component {
         list.add(component);
     }
 
+    public void addList(List<Component> list) {
+        this.list.addAll(list);
+    }
+
     public void set(List<Component> list) {
         this.list = new ArrayList<>(list);
     }

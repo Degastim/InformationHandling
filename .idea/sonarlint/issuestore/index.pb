@@ -27,3 +27,7 @@ P
  src/main/java/com/epam/Main.java,4\c\4c4c51982c2ef2798792c04ef4394d798a3dcd09
 _
 /src/main/java/com/epam/service/TextService.java,c\7\c77e3763111ad0ff05d738ad865f39963e06b69b
+<
+logs/log.txt,a\2\a2109b945a4e4d105aaf6d4fdb6490cae625b03d
+c
+3src/test/java/com/epam/service/TextServiceTest.java,8\0\801ef9a5b409b5a40323a68982dce50c18020f95

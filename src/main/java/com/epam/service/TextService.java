@@ -39,17 +39,21 @@ public class TextService {
         return resultList;
     }
 
-    public boolean removeFromTextSentencesWithLessNumberWord(String text, int number) {
+    public TextComposite removeFromTextSentencesWithLessNumberWord(String text, int number) {
+        TextComposite result = new TextComposite(Separator.TEXT);
         TextParser parser = new TextParser(Separator.PARAGRAPH);
         TextComposite textComposite = parser.parse(text);
         List<Component> paragraphList = textComposite.getList();
-        for (Component paragraphComponent : paragraphList) {
-            List<Component> sentenceComposite = ((TextComposite) paragraphComponent).getList();
-            for (Component sentenceComponent : sentenceComposite) {
-                List<Component> SentenceList = ((TextComposite) sentenceComponent).getList();
+        for (Component sentence : paragraphList) {
+            List<Component> sentenceList = ((TextComposite) sentence).getList();
+            List<Component> list = sentenceList.stream().filter(o -> o.size() >= number).collect(Collectors.toList());
+            TextComposite listComponent = new TextComposite(Separator.PARAGRAPH);
+            if (!list.isEmpty()) {
+                listComponent.addList(list);
+                result.add(listComponent);
             }
         }
-        return false;
+        return textComposite;
     }
 
     public Map<String, Long> countNumberIdenticalWords(String text) {
